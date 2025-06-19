@@ -1,72 +1,7 @@
-Github-CI: [![Build Status][build_status]][build_link]
+# Challenge 13: Castle
 
-[build_status]: ./../../actions/workflows/build.yml/badge.svg
-[build_link]: ./../../actions/workflows/build.yml
+Uses [Three.js + Vite + TypeScript starter](https://github.com/pachoclo/vite-threejs-ts-template) to start.
 
-# Three.js Vite Template with TypeScript
+Currently using [Modular Fort 01](https://polyhaven.com/a/modular_fort_01) from [Rico Cilliers](https://polyhaven.com/all?a=Rico%20Cilliers).
 
-Three.js + Vite + TypeScript starter
-
-- [Demo](../../deployments/github-pages)
-- [Jump to CLI commands](#cli-commands)
-
----
-![screenshot](docs/preview.png)
-
----
-
-## Tech Stack
-
-- Three.js
-- TypeScript
-- Vite
-
-## Stuff included in the `scene.ts`
-
-- [x] Geometry
-- [x] Material
-- [x] Mesh
-- [x] Ambient Light
-- [x] Point Light
-- [x] Camera
-- [x] Scene
-- [x] Canvas
-- [x] Renderer (WebGL)
-- [x] Loading Manager
-- [x] Orbit Controls
-- [x] Drag Controls
-- [x] Grid
-- [x] Antialias enabled
-- [x] Transparent canvas
-- [x] Responsive renderer and camera (to canvas size)
-- [x] Animation Loop
-- [x] Shadows
-- [x] Stats (FPS, ms)
-- [x] Full screen (double-click on canvas)
-- [x] Debug GUI
-
-## CLI Commands
-
-Installation
-
-```bash
-npm i
-```
-
-Run dev mode
-
-```bash
-npm run dev
-```
-
-Build
-
-```bash
-npm run build
-```
-
-Run build
-
-```bash
-npm run preview
-```
+WIP Just getting the castle assembled. Not sure where it'll go from there.
