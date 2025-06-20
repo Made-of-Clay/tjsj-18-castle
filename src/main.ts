@@ -2,12 +2,12 @@ import './style.css';
 
 import GUI from 'lil-gui';
 import { AxesHelper, BoxGeometry, Clock, GridHelper, LoadingManager, Mesh, MeshStandardMaterial, PCFSoftShadowMap, PerspectiveCamera, Scene, WebGLRenderer } from 'three';
-import { getLights } from './getLights';
+import { addLights } from './addLights';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import { getCamera } from './getCamera';
+import { addCamera } from './addCamera';
 import { resizeRendererToDisplaySize } from './helpers/responsiveness';
 import Stats from 'stats.js'
-import { getCastle } from './getCastle';
+import { addCastle } from './addCastle';
 
 // SETUP
 const canvas = document.createElement('canvas');
@@ -31,11 +31,10 @@ gridHelper.position.y = -0.01;
 scene.add(gridHelper);
 
 // LIGHTS, CAMERA, ACTION
-const { ambientLight, pointLight } = getLights();
-scene.add(ambientLight, pointLight);
+addLights(scene);
+// scene.add(ambientLight, pointLight);
 
-const { camera, cameraControls } = getCamera(canvas);
-scene.add(camera);
+const { cameraControls, resizeCamera, getActiveCamera } = addCamera(canvas, scene, gui);
 
 // OBJECTS
 const cube = new Mesh(
@@ -44,22 +43,19 @@ const cube = new Mesh(
 );
 scene.add(cube);
 
-getCastle(scene, gui);
+addCastle(scene, gui);
 
 function animate() {
     requestAnimationFrame(animate);
 
     stats.begin();
 
-    if (resizeRendererToDisplaySize(renderer)) {;
-        const canvas = renderer.domElement;
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
-    };
+    if (resizeRendererToDisplaySize(renderer))
+        resizeCamera();
 
     cameraControls.update();
 
-    renderer.render(scene, camera);
+    renderer.render(scene, getActiveCamera());
     stats.end();
 }
 

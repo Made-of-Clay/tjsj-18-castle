@@ -2,7 +2,7 @@ import GUI from 'lil-gui';
 import { Group, Mesh, Scene } from 'three';
 import { GLTF, GLTFLoader } from 'three/examples/jsm/Addons.js';
 
-export function getCastle(scene: Scene, gui: GUI) {
+export function addCastle(scene: Scene, gui: GUI) {
     // /modular_fort_01_1k/modular_fort_01_1k.gltf
     const loader = new GLTFLoader();
     loader.setResourcePath('/modular_fort_01_1k/');
