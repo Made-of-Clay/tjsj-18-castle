@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@types/stats':
-        specifier: ^0.16.30
-        version: 0.16.30
       lil-gui:
         specifier: ^0.20.0
         version: 0.20.0
@@ -21,6 +18,9 @@ importers:
         specifier: ^0.176.0
         version: 0.176.0
     devDependencies:
+      '@types/stats':
+        specifier: ^0.16.30
+        version: 0.16.30
       '@types/three':
         specifier: ^0.176.0
         version: 0.176.0
