@@ -30,6 +30,9 @@ const gridHelper = new GridHelper(20, 20, 'teal', 'darkgray');
 gridHelper.position.y = -0.01;
 scene.add(gridHelper);
 
+const axesHelper = new AxesHelper();
+scene.add(axesHelper);
+
 // LIGHTS, CAMERA, ACTION
 addLights(scene);
 // scene.add(ambientLight, pointLight);
@@ -37,12 +40,6 @@ addLights(scene);
 const { cameraControls, resizeCamera, getActiveCamera } = addCamera(canvas, scene, gui);
 
 // OBJECTS
-const cube = new Mesh(
-    new BoxGeometry(1, 1, 1),
-    new MeshStandardMaterial({ color: 'red' }),
-);
-scene.add(cube);
-
 addCastle(scene, gui);
 
 function animate() {
