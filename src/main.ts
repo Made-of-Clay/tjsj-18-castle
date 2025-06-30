@@ -1,9 +1,8 @@
 import './style.css';
 
 import GUI from 'lil-gui';
-import { AxesHelper, BoxGeometry, Clock, GridHelper, LoadingManager, Mesh, MeshStandardMaterial, PCFSoftShadowMap, PerspectiveCamera, Scene, WebGLRenderer } from 'three';
+import { AxesHelper, Clock, GridHelper, LoadingManager, PCFSoftShadowMap, Scene, WebGLRenderer } from 'three';
 import { addLights } from './addLights';
-import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import { addCamera } from './addCamera';
 import { resizeRendererToDisplaySize } from './helpers/responsiveness';
 import Stats from 'stats.js'
