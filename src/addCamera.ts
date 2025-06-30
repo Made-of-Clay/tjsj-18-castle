@@ -51,7 +51,18 @@ export function addCamera(canvas: HTMLCanvasElement, scene: Scene, gui: GUI) {
             cameraControls = new OrbitControls(activeCamera, canvas);
             cameraControls.enableDamping = true;
             cameraControls.autoRotate = false;
-            cameraControls.enableRotate = !(activeCamera as OrthographicCamera).isOrthographicCamera;
+            // console.log(`[camera ${curCam}]: set enableRotate (currently ${cameraControls.enableRotate}) to ${!(activeCamera as OrthographicCamera).isOrthographicCamera} (negate ${(activeCamera as OrthographicCamera).isOrthographicCamera})`);
+            if ('isOrthographicCamera' in activeCamera && activeCamera.isOrthographicCamera) {
+                // activeCamera.save
+            }
+            // if ('isOrthographicCamera' in activeCamera && activeCamera.isOrthographicCamera) {
+            //     cameraControls.enableRotate = !(activeCamera as OrthographicCamera).isOrthographicCamera;
+            //     cameraControls.screenSpacePanning = true;
+            // } else {
+            //     cameraControls.screenSpacePanning = false;
+            // }
+            // cameraControls.enablePan = true;
+            // cameraControls.screenSpacePanning = true;
             cameraControls.update();
         });
 
