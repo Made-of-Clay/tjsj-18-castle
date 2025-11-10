@@ -15,8 +15,8 @@ importers:
         specifier: ^0.17.0
         version: 0.17.0
       three:
-        specifier: ^0.176.0
-        version: 0.176.0
+        specifier: ^0.181.1
+        version: 0.181.1
     devDependencies:
       '@types/stats':
         specifier: ^0.16.30
@@ -362,8 +362,8 @@ packages:
   stats.js@0.17.0:
     resolution: {integrity: sha512-hNKz8phvYLPEcRkeG1rsGmV5ChMjKDAWU7/OJJdDErPBNChQXxCo3WZurGpnWc6gZhAzEPFad1aVgyOANH1sMw==}
 
-  three@0.176.0:
-    resolution: {integrity: sha512-PWRKYWQo23ojf9oZSlRGH8K09q7nRSWx6LY/HF/UUrMdYgN9i1e2OwJYHoQjwc6HF/4lvvYLC5YC1X8UJL2ZpA==}
+  three@0.181.1:
+    resolution: {integrity: sha512-bz9xZUQMw3pJbjKy7roiwXWgAp+oVUa+4k5o0oBAQ+IFJuru1xzvtk63h6k72XZanXS/SgoEhV6927Vgazyq2w==}
 
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
@@ -658,7 +658,7 @@ snapshots:
 
   stats.js@0.17.0: {}
 
-  three@0.176.0: {}
+  three@0.181.1: {}
 
   tinyglobby@0.2.14:
     dependencies:
